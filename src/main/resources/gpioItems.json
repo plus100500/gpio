@@ -1,0 +1,22 @@
+{
+  "objects": [
+    {
+      "name": "Гостинная",
+      "maxTemp": 25.5,
+      "minTemp": 24.5,
+      "gpio": {
+        "id": 1,
+        "type": 1
+      }
+    },
+    {
+      "name": "Спальня родителей",
+      "maxTemp": 25.5,
+      "minTemp": 24.5,
+      "gpio": {
+        "id": 2,
+        "type": 1
+      }
+    }
+  ]
+}
