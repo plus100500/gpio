@@ -6,9 +6,9 @@ import ru.bityard.model.GpioObject;
 
 import java.util.List;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {RelayMapper.class, DallasMapper.class})
 public interface GpioObjectMapper {
     GpioObjectDto convert(GpioObject gpioObject);
 
-    List<GpioObjectDto> convert(List<GpioObject> gpioObjects);
+    List<GpioObjectDto> convert(List<GpioObject> gpioObjectList);
 }

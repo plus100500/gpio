@@ -6,7 +6,7 @@ import lombok.Data;
 
 @Data
 @ApiModel("Устройство, подключенное к GPIO")
-public class GpioItemDto {
+public class GpioPinDto {
     @ApiModelProperty("Номер контакта, к которому подключено устройство")
     private long num;
 

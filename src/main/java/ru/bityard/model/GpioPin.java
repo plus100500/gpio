@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 
 @Data
-public class GpioItem {
+public class GpioPin {
     @JsonProperty("id")
     private long num;
     private int type;

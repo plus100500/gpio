@@ -2,8 +2,12 @@
   "objects": [
     {
       "name": "Гостинная",
-      "maxTemp": 25.5,
-      "minTemp": 24.5,
+      "gpioDevice": {
+        "type": "dallas",
+        "serial": "SN000001",
+        "maxTemp": 25.5,
+        "minTemp": 24.5
+      },
       "gpio": {
         "id": 1,
         "type": 1
@@ -11,11 +15,27 @@
     },
     {
       "name": "Спальня родителей",
-      "maxTemp": 25.5,
-      "minTemp": 24.5,
+      "gpioDevice": {
+        "type": "dallas",
+        "serial": "SN000002",
+        "maxTemp": 25.5,
+        "minTemp": 24.5
+      },
       "gpio": {
         "id": 2,
         "type": 1
+      }
+    },
+    {
+      "name": "Реле управления котла",
+      "gpioDevice": {
+        "type": "relay",
+        "isSwitchedOn": true,
+        "isInverse": true
+      },
+      "gpio": {
+        "id": 3,
+        "type": 2
       }
     }
   ]

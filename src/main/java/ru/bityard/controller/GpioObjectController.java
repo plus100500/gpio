@@ -24,18 +24,6 @@ import java.util.Objects;
 public class GpioObjectController {
     private final GpioObjectService gpioObjectService;
 
-//    @ApiOperation(value = "Получение информации обо всех объектах")
-//    @ApiResponses({
-//            @ApiResponse(
-//                    code = 200,
-//                    response = GpioObjectDto[].class,
-//                    message = "Список всех объектов"),
-//    })
-//    @GetMapping
-//    public List<GpioObjectDto> get() {
-//        return gpioObjectService.getAll();
-//    }
-
     @ApiOperation(value = "Получение информации об объекте по наименованию, либо получение информации обо всех объектах")
     @ApiResponses({
             @ApiResponse(
