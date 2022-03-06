@@ -6,9 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import ru.bityard.config.InMemoryDbConfig;
-import ru.bityard.gpio.model.Dallas;
-import ru.bityard.gpio.model.Relay;
-import ru.bityard.gpio.repository.InMemoryDbGpioObject;
 import ru.bityard.telegram.model.KeyWordType;
 import ru.bityard.telegram.repository.InMemoryDbKeyWords;
 

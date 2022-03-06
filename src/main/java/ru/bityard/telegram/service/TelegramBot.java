@@ -28,14 +28,14 @@ public class TelegramBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         try {
-                String message = TelegramUtil.getMessage(update);
-                long chatId = update.getMessage().getChatId();
-                log.debug("{}, {}, {}",
-                        keyValue(LogKey.LOG_POINT.getName(), "onUpdateReceived"),
-                        keyValue(LogKey.TELEGRAM_MESSAGE.getName(), message),
-                        keyValue(LogKey.TELEGRAM_CHAT_ID.getName(), chatId));
+            String message = TelegramUtil.getMessage(update);
+            long chatId = update.getMessage().getChatId();
+            log.debug("{}, {}, {}",
+                    keyValue(LogKey.LOG_POINT.getName(), "onUpdateReceived"),
+                    keyValue(LogKey.TELEGRAM_MESSAGE.getName(), message),
+                    keyValue(LogKey.TELEGRAM_CHAT_ID.getName(), chatId));
 
-                telegramBotHelper.parse(chatId, message);
+            telegramBotHelper.parse(chatId, message);
 
         } catch (Exception e) {
             log.warn("{}, {}, {}, {}",

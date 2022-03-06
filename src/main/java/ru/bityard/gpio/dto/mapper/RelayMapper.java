@@ -9,5 +9,6 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface RelayMapper {
     RelayDto convert(Relay realy);
+
     List<RelayDto> convert(List<Relay> relayList);
 }

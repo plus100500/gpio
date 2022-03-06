@@ -6,7 +6,6 @@ import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
-import ru.bityard.telegram.service.TelegramBot;
 import ru.bityard.util.LogKey;
 
 import javax.annotation.PostConstruct;
