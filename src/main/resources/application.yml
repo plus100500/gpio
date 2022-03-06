@@ -11,3 +11,13 @@ spring:
     timestamp: "@maven.build.timestamp@"
   main:
     banner-mode: off
+
+telegram:
+  bot:
+    name: "WellHouseBot"
+    token: "471305156:AAFf5JpkFleswTVzDGl2cmfWqvWS66waFvk"
+  proxy:
+    host: "vms2.it-delta.ru"
+    port: 1080
+    user: "userproxy1"
+    password: "862345428az"

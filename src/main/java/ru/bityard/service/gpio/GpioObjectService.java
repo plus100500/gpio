@@ -1,4 +1,4 @@
-package ru.bityard.service;
+package ru.bityard.service.gpio;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
