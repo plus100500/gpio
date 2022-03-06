@@ -1,0 +1,48 @@
+{
+  "keyWords": [
+    {
+      "key": "вкл",
+      "type": "ON"
+    },
+    {
+      "key": "включить",
+      "type": "ON"
+    },
+    {
+      "key": "on",
+      "type": "ON"
+    },
+    {
+      "key": "выкл",
+      "type": "OFF"
+    },
+    {
+      "key": "выключить",
+      "type": "OFF"
+    },
+    {
+      "key": "off",
+      "type": "OFF"
+    },
+    {
+      "key": "стат",
+      "type": "STAT"
+    },
+    {
+      "key": "статистика",
+      "type": "STAT"
+    },
+    {
+      "key": "stat",
+      "type": "STAT"
+    },
+    {
+      "key": "statistic",
+      "type": "STAT"
+    },
+    {
+      "key": "статистику",
+      "type": "STAT"
+    }
+  ]
+}
