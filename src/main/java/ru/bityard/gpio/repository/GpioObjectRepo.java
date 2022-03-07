@@ -16,7 +16,7 @@ public class GpioObjectRepo {
     }
 
     public GpioObject getByName(String name) {
-        return repository.getObjects().stream().filter(o -> name.equals(o.getName())).findFirst().orElse(null);
+        return repository.getObjects().stream().filter(o -> name.contains(o.getName())).findFirst().orElse(null);
     }
 
     public GpioObject save(GpioObject gpioObject) {

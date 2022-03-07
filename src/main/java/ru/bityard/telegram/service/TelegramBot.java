@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import ru.bityard.util.AppLog;
 import ru.bityard.util.LogKey;
+import ru.bityard.util.LogLevel;
 
 import javax.annotation.PostConstruct;
 
@@ -38,11 +40,7 @@ public class TelegramBot extends TelegramLongPollingBot {
             telegramBotHelper.parse(chatId, message);
 
         } catch (Exception e) {
-            log.warn("{}, {}, {}, {}",
-                    keyValue(LogKey.LOG_POINT.getName(), "onUpdateReceived"),
-                    keyValue(LogKey.EXCEPTION_CAUSE.getName(), e.getCause()),
-                    keyValue(LogKey.EXCEPTION_MESSAGE.getName(), e.getMessage()),
-                    keyValue(LogKey.EXCEPTION_TYPE.getName(), e.getClass()));
+            AppLog.exception(LogLevel.WARN,"onUpdateReceived",e);
         }
     }
 
