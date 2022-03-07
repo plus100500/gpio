@@ -2,6 +2,7 @@
   "objects": [
     {
       "name": "Гостинная",
+      "description": "Датчик температуры в гостинной",
       "gpioDevice": {
         "type": "dallas",
         "serial": "SN000001",
@@ -15,6 +16,7 @@
     },
     {
       "name": "Спальня родителей",
+      "description": "Датчик температуры в Спальне родителей",
       "gpioDevice": {
         "type": "dallas",
         "serial": "SN000002",
@@ -27,7 +29,8 @@
       }
     },
     {
-      "name": "Реле управления котла",
+      "name": "Котел",
+      "description": "Реле управления котлом",
       "gpioDevice": {
         "type": "relay",
         "isSwitchedOn": true,

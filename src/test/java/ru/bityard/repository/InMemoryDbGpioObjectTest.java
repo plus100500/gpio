@@ -29,6 +29,7 @@ public class InMemoryDbGpioObjectTest {
         inMemoryDbGpioObject.getObjects().forEach(gpioObject -> {
             assertTrue(Objects.nonNull(gpioObject));
             assertFalse(gpioObject.getName().isEmpty());
+            assertFalse(gpioObject.getDescription().isEmpty());
             assertNotNull(gpioObject.getGpioDevice());
             switch ((int) gpioObject.getGpio().getNum()) {
                 case 1: {

@@ -7,6 +7,7 @@ import lombok.Data;
 @ApiModel("Объект, подключенный к GPIO")
 public class GpioObjectDto {
     private String name;
+    private String description;
     private GpioDeviceDto gpioDevice;
     private GpioPinDto gpio;
 }

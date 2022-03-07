@@ -6,6 +6,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import ru.bityard.telegram.model.KeyWordType;
 import ru.bityard.telegram.repository.InMemoryDbKeyWords;
+import ru.bityard.telegram.repository.KeyWordsRepo;
 import ru.bityard.util.LogKey;
 
 import java.util.concurrent.CompletableFuture;
@@ -16,11 +17,11 @@ import static net.logstash.logback.argument.StructuredArguments.keyValue;
 @Service
 @RequiredArgsConstructor
 public class TelegramBotHelper {
-    private final InMemoryDbKeyWords inMemoryDbKeyWords;
+    private final KeyWordsRepo keyWordsRepo;
 
     @Async
     public CompletableFuture<String> parse(long chatId, String message) {
-        KeyWordType type = inMemoryDbKeyWords.getTypeByKey(message);
+        KeyWordType type = keyWordsRepo.getTypeByKey(message);
         log.debug("{}, {}, {}, {}",
                 keyValue(LogKey.LOG_POINT.getName(), "parse"),
                 keyValue(LogKey.TELEGRAM_KEY_TYPE.getName(), type),
