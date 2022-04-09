@@ -25,7 +25,7 @@ public class TelegramBot extends TelegramLongPollingBot {
     @Value("${telegram.bot.token}")
     private String token;
 
-    private final TelegramBotHelper telegramBotHelper;
+    private final TelegramBotListener telegramBotListener;
 
     @Override
     public void onUpdateReceived(Update update) {
@@ -37,7 +37,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                     keyValue(LogKey.TELEGRAM_MESSAGE.getName(), message),
                     keyValue(LogKey.TELEGRAM_CHAT_ID.getName(), chatId));
 
-            telegramBotHelper.parse(chatId, message);
+            telegramBotListener.parseReceived(chatId, message);
 
         } catch (Exception e) {
             AppLog.exception(LogLevel.WARN,"onUpdateReceived",e);

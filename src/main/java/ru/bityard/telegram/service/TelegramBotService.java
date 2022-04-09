@@ -31,4 +31,10 @@ public class TelegramBotService {
             AppLog.exception(LogLevel.WARN, "init", e);
         }
     }
+
+    public void send(String text) {
+        log.debug("{}, {}",
+                keyValue(LogKey.LOG_POINT.getName(), "send"),
+                keyValue(LogKey.TELEGRAM_MESSAGE.getName(), text));
+    }
 }

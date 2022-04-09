@@ -5,10 +5,7 @@ import io.swagger.annotations.ApiParam;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ru.bityard.gpio.dto.GpioObjectDto;
 import ru.bityard.gpio.service.GpioObjectService;
 
@@ -39,5 +36,20 @@ public class GpioObjectController {
         } else {
             return Collections.singletonList(gpioObjectService.getByName(name));
         }
+    }
+
+    @ApiOperation(value = "Добавление объекта")
+    @ApiResponses({
+            @ApiResponse(
+                    code = 200,
+                    response = GpioObjectDto.class,
+                    message = "Созданный объект"),
+    })
+    @PostMapping
+    public GpioObjectDto create(
+            @ApiParam(value = "Наименование объекта")
+            @RequestBody GpioObjectDto dto) {
+
+        return gpioObjectService.create(dto);
     }
 }

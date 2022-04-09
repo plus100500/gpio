@@ -9,6 +9,6 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface DallasMapper {
     DallasDto convert(Dallas dallas);
-
+    Dallas convert(DallasDto dto);
     List<DallasDto> convert(List<Dallas> dallasList);
 }

@@ -41,7 +41,7 @@ public class GpioObjectService {
                 //TODO сохранить состояние в gpioObject
                 ((Relay) gpioObject.getGpioDevice()).setSwitchedOn(true);
                 //TODO сформировать сообщение в ответ
-                response = gpioObject.getName() + "включен";
+                response = gpioObject.getName() + " включен";
             } break;
             case OFF: {
 
@@ -54,5 +54,9 @@ public class GpioObjectService {
             }
         }
         return response;
+    }
+
+    public GpioObjectDto create(GpioObjectDto dto) {
+        return gpioObjectMapper.convert(gpioObjectRepo.save(gpioObjectMapper.convert(dto)));
     }
 }

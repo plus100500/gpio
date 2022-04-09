@@ -11,5 +11,7 @@ public interface GpioObjectMapper {
 
     GpioObjectDto convert(GpioObject gpioObject);
 
+    GpioObject convert(GpioObjectDto dto);
+
     List<GpioObjectDto> convert(List<GpioObject> gpioObjectList);
 }
