@@ -1,4 +1,4 @@
-package ru.bityard.gpio.app.dto;
+package ru.bityard.gpio.api.dto;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

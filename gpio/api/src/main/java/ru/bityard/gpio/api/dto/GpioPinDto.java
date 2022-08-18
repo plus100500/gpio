@@ -1,4 +1,4 @@
-package ru.bityard.gpio.app.dto;
+package ru.bityard.gpio.api.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

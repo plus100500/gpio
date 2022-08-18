@@ -6,8 +6,8 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.bityard.util.AppLog;
-import ru.bityard.util.LogLevel;
+import ru.bityard.gpio.lib.util.AppLog;
+import ru.bityard.gpio.lib.util.LogLevel;
 
 @Slf4j
 @Service

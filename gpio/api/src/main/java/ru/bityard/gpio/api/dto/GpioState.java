@@ -1,4 +1,4 @@
-package ru.bityard.gpio.app.model;
+package ru.bityard.gpio.api.dto;
 
 public enum GpioState {
     ON,

@@ -1,10 +1,10 @@
-package ru.bityard.gpio.app.dto.mapper;
+package ru.bityard.gpio.app.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
-import ru.bityard.gpio.app.dto.DallasDto;
-import ru.bityard.gpio.app.dto.GpioDeviceDto;
-import ru.bityard.gpio.app.dto.RelayDto;
+import ru.bityard.gpio.api.dto.DallasDto;
+import ru.bityard.gpio.api.dto.GpioDeviceDto;
+import ru.bityard.gpio.api.dto.RelayDto;
 import ru.bityard.gpio.app.model.Dallas;
 import ru.bityard.gpio.app.model.GpioDevice;
 import ru.bityard.gpio.app.model.Relay;

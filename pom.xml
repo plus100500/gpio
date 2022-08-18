@@ -11,6 +11,7 @@
     <name>smarthouse</name>
 
    <modules>
+       <module>gpio/api</module>
        <module>gpio/app</module>
        <module>gpio/lib</module>
        <module>telegram/app</module>

@@ -1,7 +1,7 @@
-package ru.bityard.gpio.app.dto.mapper;
+package ru.bityard.gpio.app.mapper;
 
 import org.mapstruct.Mapper;
-import ru.bityard.gpio.app.dto.GpioObjectDto;
+import ru.bityard.gpio.api.dto.GpioObjectDto;
 import ru.bityard.gpio.app.model.GpioObject;
 
 import java.util.List;

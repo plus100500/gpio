@@ -2,10 +2,10 @@ package ru.bityard.gpio.app.service;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import ru.bityard.gpio.app.dto.GpioObjectDto;
-import ru.bityard.gpio.app.dto.mapper.GpioObjectMapper;
+import ru.bityard.gpio.api.dto.GpioObjectDto;
+import ru.bityard.gpio.app.mapper.GpioObjectMapper;
 import ru.bityard.gpio.app.model.GpioObject;
-import ru.bityard.gpio.app.model.GpioState;
+import ru.bityard.gpio.api.dto.GpioState;
 import ru.bityard.gpio.app.model.Relay;
 import ru.bityard.gpio.app.repository.GpioObjectRepo;
 
@@ -29,11 +29,12 @@ public class GpioObjectService {
     /**
      *
      * @param gpioState -
-     * @param gpioObject -
+     * @param dto -
      * @return - если ответ != null, значит нужно вернуть его инициатору процесса
      */
-    public String switcher(GpioState gpioState, GpioObject gpioObject) {
+    public String switcher(GpioState gpioState, GpioObjectDto dto) {
         String response = null;
+        GpioObject gpioObject = gpioObjectMapper.convert(dto);
         switch (gpioState) {
             case ON: {
                 //TODO послать команду в gpio
